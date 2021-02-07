@@ -1,0 +1,46 @@
+Name: Hashcat
+Category: Crypto
+
+Description:
+A Poor CAT was trying to learn hashes she encypted a file and zipped it...........but forgot password after sometime. can you help the poor cat to get her file back? Download File Initial password: trollcat PS: No bruteforce required
+Link: https://drive.google.com/file/d/1ur2Zem90RwzqP2qXk9_Qn8bInuJiKWUg/view?usp=sharing
+
+Solution: 
+A rar file is given to us in this challenge.
+When extracting the file we are prompted for a password.
+Initial password is 'trollcat'
+
+After this we get another file openme.rar and a hint.txt
+The hint.txt had this
+
+----------]<-<---<-------<---------->>>>+[<<<<------------,>++++++++++++++++++,<---,,----,++++++++,---,++++++++++++++,-----,----------,+++++,-,-----,++++++++++++,>+++,<++++,,-,---------,
+
+This is a BrainFuck code but when I tried running ,it didn't work.
+I looked at different variants of this programming language utilizing the same symbols but was not able to find one
+that worked.
+
+I was not able to move ahead, after the CTF I got to know that there is ReverseFuck and that was what was needed
+for this challenge
+
+We can use this: https://www.dcode.fr/reversefuck-language
+
+After running that we get this password: 'p4sswordisnoth1dden'
+
+We can use this to extract the openme.rar
+
+This again gives two files 'You did it.rar' and You_are_very_close.txt
+
+The txt file had this hint
+'
+	Have you ever heard about hashes?
+	try it out you might find something interesting ;)
+
+'
+
+This indicates towards the md5 of a file.
+You can get the md5 of a file with this command: md5sum You_are_very_close.txt
+The md5 hash is : aab2ee6281c7c190e7ae2c4cacddad52
+
+Using this as the password we can extract the rar file
+
+FLAG: Trollcat{Ev3ry_f1le_h4s_un1que_h4sh_v4lue}

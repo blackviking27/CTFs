@@ -1,0 +1,24 @@
+Name: Trip to Snapistan 2
+Category: Osint
+
+Description: 
+He went to this fancy restaurant and lost his wallet there ! Quickly find me the place's phone number.
+
+Link: https://story.snapchat.com/s/o:W7_EDlXWTBiXAEEniNoMPwAAY__Pgl9WY5jcAAXbWrJJEAXbWrJF5AO1OAA/
+
+Solution:
+There is a link to a snap story
+Looking at the snap story reveals two things, Al Muhammadyah and Le Conche(which is not the full name)
+
+Reading the description on the tissue paper on the right we can say that it was a cafe
+
+Al Muhammadiyah is a place in Saudi Arabia.
+I googled this ' cafes in "Al Muhammadiyah" '
+I put the place name in double quotes because that needed to be in the result
+
+I opened the list of Cafe's that were shown in the google maps and found the name of the Cafe : Le Concheur
+There was website for which was mentioned for the cafe
+
+Going in the contact us of the webpage we can get the phone number of the cafe
+
+FLAG: Trollcat{966500771177}

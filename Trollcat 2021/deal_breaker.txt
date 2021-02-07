@@ -1,0 +1,18 @@
+Name: Deal Breaking
+Category: Crypto
+
+Description: 
+Salva is the secretary of the CEO of a ROTech Pvt Ltd. Today is an important day because the CEO is going to a meeting to sign a $13 Million Deal with another company. When Salva went to the office, she finds that the CEO is lying unconscious on his chair. It seems like Salva gave some wrong medicines to the CEO today. But now for the deal to happen, Salva needs to access the CEO's laptop and send the details of the Deal to the Vice President. The laptop was secured with the most modern security service. One has to decrypt a random text to gain access to the laptop.
+
+Given cipher: cnenprgnzbysbeurnqnpur
+
+Solution:
+If you read the description carefully you will realize that the ROT is highlighted which indicates towards the rot13
+cipher
+
+We can use this tool
+```https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,false,13)```
+
+Decrypting the cipher gives this: paracetamolforheadache
+
+FLAG: Trollcat{paracetamolforheadache}

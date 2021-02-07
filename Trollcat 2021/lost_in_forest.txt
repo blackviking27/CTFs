@@ -1,0 +1,20 @@
+Name: Lost in Forest
+Category: Crypto
+
+Description: 
+Rohit one day went on a solo trip on an adventure to Amazon Forest in Brazil. But unfortunately, on his adventure, he got lost in the vast Amazonian forest. His cellphone had no reception and even his compass was not working. After travelling for 6 hours without food and water, he met a tribal man. He was the 64th Tribal Chief of Yanomano tribe of native Amazon. Rohit was delighted to see him and ran straight to him for seeking help. The tribal man agreed to help him but only on ONE condition. That condition was to help the tribal man understand some random text which was etched on a stone tablet for the last 1000 years!!! The text etched on the stone tablet is given below
+
+Cipher: TWVyY3VyeVZlbnVzRWFydGhNYXJzSnVwaXRlclNhdHVyblVyYW51c05lcHR1bmU=
+
+Solution:
+The cipher looks like base64
+
+You can decode the cipher with this tool
+https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true)&input=Y25lbnByZ256YnlzYmV1cm5xbnB1cg
+
+or use this command in linux
+echo 'TWVyY3VyeVZlbnVzRWFydGhNYXJzSnVwaXRlclNhdHVyblVyYW51c05lcHR1bmU=' | base64 -d
+
+The decoded text is : MercuryVenusEarthMarsJupiterSaturnUranusNeptune
+
+FLAG: Trollcat{MercuryVenusEarthMarsJupiterSaturnUranusNeptune}

@@ -1,0 +1,23 @@
+Name: Nested exploration
+Category: Web
+
+Description: Login 69 times and maybe you get lucky
+Link: http://178.128.101.239/register
+
+Solution:
+This was simple challenge which asked us to login 69 times, if we try to login we can see another prompt appears
+just below the current prompt.
+
+Capture the request with burpsuite and we can see that no values are being passed in the request and there is a single cookie which is id=1
+
+(or you can set the value of the cookie in the storage section of browser using the developers too. In Firefox, open the developers tools with Ctrl+Shift+I, then go to Storage Tab->Cookies and there you can set the value of the parameter by double clicking it)
+
+If we change the value to any value then it seems to affect the number of prompts which would mean that the count
+of the input prompt is maintained by this.
+
+Since we want 69 we can try inserting that in the id and then send the request but that did not  give the flag.
+Now if we send id=0 we can see only one prompt which means that the counting for the prompt starts from 0 and the
+69th request would be 68 but if we send 68 we don't get the flag in the response.
+But if we send 67 in the request we get the flag in the response
+
+FLAG: Trollcat{w3b_scr1pt3rs_b3w4re}
