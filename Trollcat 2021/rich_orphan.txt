@@ -1,0 +1,23 @@
+Name: Rich Orphan
+Category: Misc
+
+Description: Some rich orphan left me this file, find me the password !
+Link: https://cdn.discordapp.com/attachments/782656136976662539/807551386505969684/RichOrphan.txt
+
+Solution:
+The content of the txt file is: 
+sys:$1$fUX6BPOt$Miyc3UpOzQJqz4s5wFD9l0:14742:0:99999:7:::
+sys:x:3:3:sys:/dev:/bin/sh
+
+Looks like content of /etc/shadow file
+
+We can see the hash : $1$fUX6BPOt$Miyc3UpOzQJqz4s5wFD9l0
+We can know the kind of hash using this command: hashid '$1$fUX6BPOt$Miyc3UpOzQJqz4s5wFD9l0'
+It is a MD5crypt hash
+
+We can crack this using eihter hashcat or john
+
+Hashcat: hashcat -m 13000 -a 0 '$1$fUX6BPOt$Miyc3UpOzQJqz4s5wFD9l0' rockyou.txt
+John: john --wordlist=rockyou.txt hash.txt (hash.txt has only the hash present inside it, you can specify the hash format with --format=md5crypt)
+
+FLAG: Trollcat{batman}
