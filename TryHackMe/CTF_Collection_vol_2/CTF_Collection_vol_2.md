@@ -3,4 +3,4 @@
 <h3>EASTER 1</h3>
 
 <p>Visit the robots.txt and we can see hex characters on the bottom</p>
-!['IMAGE'](TryHackMe/CTF_Collection_vol_2/Screenshot (34).png)
+!['IMAGE'](https://github.com/blackviking27/CTFs/blob/main/TryHackMe/CTF_Collection_vol_2/Screenshot%20(34).png)
