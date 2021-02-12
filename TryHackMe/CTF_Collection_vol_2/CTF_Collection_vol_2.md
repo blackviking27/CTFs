@@ -3,12 +3,12 @@
 <h3>EASTER 1</h3>
 
 <p>Visit the robots.txt and we can see hex characters on the bottom</p>
-<img src='./Screenshot%20(34).png'></img>
+<br><img src='./Screenshot%20(34).png'></img><br>
 <p>
 Extract the hex character ans remove the spaces and join the hex characters.
 Now we can decode this hex. For this we can either use <a href='https://gchq.github.io/CyberChef/'>CyberChef</a> or python console (any other language can be used too)
 I am going to do with cyberchef since it's a great tool.
-<img src='./Screenshot (35).png' />
+<br><img src='./Screenshot (35).png' /><br>
 and with python consoole we can get the flag with this 
 <b>bytes.fromhex('45617374657220313a2054484d7b347537306230375f72306c6c5f3075377d')</b></p>
 
@@ -18,7 +18,7 @@ and with python consoole we can get the flag with this
 In robots.txt we can see that there is a base64 encoded string. If you try to visit it you will get a 404 error.
 We need to decode this string first.
 You can use cyberchef again
-<img src='Screenshot (36).png'/>
+<br><img src='Screenshot (36).png'/><br>
 you will need this recipe in Cyberchef <h5>From Base64 > URL decode > From Base64 > Remove Whitespace > From Base64 > Remove Whitespace > From Base64</h5>
   Visit the /DesKel_secret_base, look at the source code of the page and you will get the flag
 </p>
@@ -57,7 +57,7 @@ If you look at the hints we can see that it is asking to look for a sqli
   <h5>sqlmap -r post.req --dbms=mysql -D THM_f0und_m3 --dump</h5>
   We need to wait for some time since it is a time-based attack
   After all the data is dumped, we can see the flag
-  <img src='./Screenshot (39).png'/>
+  <br><img src='./Screenshot (39).png'/><br>
 
 </p>
 
@@ -74,7 +74,7 @@ If you look at the hints we can see that it is asking to look for a sqli
 <p>
 If we look at the hint it asks us to look in the response header.
   Look at the response header for the main page and we see the flag in the response
-  <img src='./Screenshot (37).png'/>
+  <br><img src='./Screenshot (37).png'/><br>
 </p>
 
 
@@ -85,7 +85,7 @@ If we look at the hint it asks us to look in the response header.
   I am going to use cURL for this, you can also use the browser to set the cookie value in the localstorage.
   <h5>curl http://{MACHINE IP} -H 'Cookie: Invited=1' | grep THM </h5>
   I am using the grep command to just get the line  which has 'THM' string in it, since the source code of the webpage is very long.
-  <img src='./Screenshot (38).png'/>
+  <br><img src='./Screenshot (38).png'/><br>
 </p>
 
 <h3>Easter 8</h3>
@@ -104,9 +104,9 @@ If we look at the hint it asks us to look in the response header.
   We need to intercept the response and look at the content of the webpage. We will burpsuite for this.
   Before that we need to intercept the reponses too.
   Go to <b>Options</b> in the Proxy tab and chekc on the Intercept server responses to intercept the responses too.
-  <img src='./Screenshot (41).png'/><br>
+  <br><img src='./Screenshot (41).png'/><br>
   Now, click on the button again and now we can the response that is coming from /ready. The flag is in the source code.<br>
-  <img src='./Screenshot (42).png' />
+  <br><img src='./Screenshot (42).png' /><br>
 </p>
 
 
@@ -169,7 +169,7 @@ If we look at the hint it asks us to look in the response header.
   There is a binary string  in the source code of the home page inside a script tag which is calling a function named actz. We need to convert this binary to hexadecimal number.<br>
   We can use python for this. We will follow the particular path
   <h5>Binary > hex > ascii</h5>
-  <img src='./Screenshot (53).png'/>
+  <br><img src='./Screenshot (53).png'/><br>
   <br>We need to put the binary in the quotes so that it is a string and can be interpreted by the int function
 </p>
 
@@ -191,12 +191,3 @@ Reading hint doesn't give much. Scrolling through the source code we can see img
   We get the flag when we send the post request
   <br><h5>curl http://{MACHINE IP} -d 'username=DesKel&password=heIsDumb' | grep THM</h5>
 </p>
-
-
-
-
-
-
-
-
-
