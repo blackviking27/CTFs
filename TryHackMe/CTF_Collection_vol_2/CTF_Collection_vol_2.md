@@ -65,7 +65,7 @@ If you look at the hints we can see that it is asking to look for a sqli
 
 <p>
   Look at the contents of the user table we can see that there are creds for user DesKel<br>
-  <img src='./Screenshot (40).png'/>
+  <br><img src='./Screenshot (40).png'/><br>
   We can crack the hash with <a href='https://crackstation.net/'>Crack Station</a>.<br>
   Crack the hash and you will get the password for the User. Use these creds in /login and you can see the flag.
 </p>
