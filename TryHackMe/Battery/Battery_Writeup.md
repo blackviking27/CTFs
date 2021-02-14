@@ -29,7 +29,7 @@ We take email that we got earlier and try to register it but now we got to the s
 <br></br><img src='Screenshot (62).png' /><br></br>
 Register and then you can just login with the admin email and get the account.
 Now we can visit the My account and command tab.
-Sending the data in command  tab we can see that it is sending data in xml.
+Submitting the data in 'command'  tab, shows us that it is sending data in xml.
 <br></br><img src='Screenshot (63).png'/><br></br>
 Let's try for XXE (read more about XXE <a href='https://portswigger.net/web-security/xxe'>here</a>)
 <br></br><img src='Screenshot (64).png'/><br></br>
