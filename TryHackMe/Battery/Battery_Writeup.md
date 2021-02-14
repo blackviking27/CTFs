@@ -36,7 +36,7 @@ Let's try for XXE (read more about XXE <a href='https://portswigger.net/web-secu
 So we have XXE, let's try reading /etc/passwd
 <br></br><img src='Screenshot (65).png'/><br></br>
 We can read files with this but while reading php file we need to encode them in base64. So now our payload would be
-<h5><!DOCTYPE foo [<!ENTITY ent SYSTEM 'php://filter/convert.base64-encode/resource={php file}'>]</h5>
+<h5>"<!DOCTYPE foo [<!ENTITY ent SYSTEM 'php://filter/convert.base64-encode/resource={php file}'>]"</h5>
 You can read php files with this payload. You will get back a base64 endcoded string, decode that to get the plaintext php code. When you read <b>acc.php</b> you will find creds for 
 cyber user. Use those creds to get ssh connection and there you can read the flag
 <br></br><img src='Screenshot (66).png' /><br></br>
