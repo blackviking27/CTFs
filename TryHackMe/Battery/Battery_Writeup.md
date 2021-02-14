@@ -1,4 +1,4 @@
-<h1>Write up for Battery roon on <a href='https://tryhackme.com'>TryHackMe</a></h1>
+<h1>Write up for Battery room on <a href='https://tryhackme.com'>TryHackMe</a></h1>
 
 <h3>Base Flag</h3>
 
