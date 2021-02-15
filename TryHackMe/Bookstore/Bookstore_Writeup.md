@@ -10,7 +10,7 @@ The debugger pin is in sid's bash history which would be <b>.bash_history</b><br
 Now we move to port 5000.
 It is a REST Api and if you visit <b>/api</b> you can see all the available endpoints.
 I tried to read the bash file with id, author and published query parameter but they did not work.
-So I went back to the website and started the enumeration again and this tim in /assests/js/api.js I saw the following comment
+So I went back to the website and started the enumeration again and this time in /assests/js/api.js I saw the following comment
 <h5>//the previous version of the api had a paramter which lead to local file inclusion vulnerability, glad we now have the new version which is secure.</h5>
 This indicates that we need to look for a parameter in the previous version. So now we need to change the version from v2 to v1 and look for a parameter.
 <br></br>I used <b><a href='https://github.com/ffuf/ffuf'>FFUF</a></b> for this.
