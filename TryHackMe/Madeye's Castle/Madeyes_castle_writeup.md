@@ -48,7 +48,7 @@ You can extract the column content with this payload (replace spaces with '+' in
 
 When extracting we get multiple users, the one user that stands out is <b>Harry Turner</b> because of what his notes say <b>My linux username is my first name</b> and the note next to harry say <b>and password uses best64</b>
 <br></br>
-Now best64 is a rule which is used in hashcat, rules are basically how a string can be constructed in different ways given a rule (read more about it <a href='https://laconicwolf.com/2019/03/29/hashcat-tutorial-rule-writing/'>here</a>). In linux you can find it's location is <b>/usr/share/hashcat/rules/best64.rule</b> or you can find the rule <a href='https://github.com/hashcat/hashcat/blob/master/rules/best64.rule'>here</a>
+Now best64 is a rule which is used in hashcat, rules are basically how a string can be constructed in different ways given a rule (read more about it <a href='https://laconicwolf.com/2019/03/29/hashcat-tutorial-rule-writing/'>here</a>). In linux it's location is <b>/usr/share/hashcat/rules/best64.rule</b> or you can find the rule <a href='https://github.com/hashcat/hashcat/blob/master/rules/best64.rule'>here</a>
 
 So we need to crack Harry's hash with best64 rule but what wordlist do we need, if we use rockyou.txt then it will take a long time so we can use the spellnames.txt wordlist that we found earlier. Now we need to find the type of hash that is, we can use hashid in linux.
 <h5>hashid '{HASH}'</h5>
