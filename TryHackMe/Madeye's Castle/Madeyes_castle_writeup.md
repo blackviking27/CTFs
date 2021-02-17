@@ -33,7 +33,7 @@ Visiting the vhost just gives us a login page.I tried some default creds for tha
 <br></br><img src='Screenshot (85).png'/><br></br>
 Nice, now we have sql injection. Let's take this request to burp repeater. Let's determine the number of columns in the table. I tried order by, group by but they didn't work but union select worked.
 <br></br><img src='Screenshot (86).png'/><br></br>
-We can see that value 1 and 4 are being reflected in the response, We can use this to get data from the server. I tried to determine what version was, tried all the verion commands and sqlite_version() gave back the response
+We can see that value 1 and 4 are being reflected in the response, We can use this to get data from the server. I tried to determine what DB it was by running different version commands, tried all the version commands and sqlite_version() gave back the response
 <br></br><img src='Screenshot (87).png'/><br></br>
 We now know that it is sqlite, let's get the tables
 <br></br><img src='Screenshot (88).png'/><br></br>
