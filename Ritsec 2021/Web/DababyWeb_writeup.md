@@ -17,4 +17,4 @@ and got the contents of the file. Now we need to get the flag. Enumerate the pre
 ### Flag
 RS{J3TS0N_M4D3_4N0TH3R_0N3}
 
-PS : Read this writeup as he goes into more details, https://github.com/Ch3lLIST4/CTF-Writeups-2021/blob/main/RITSEC-CTF-2021/DababyWeb.md
+PS : Read this writeup as it goes into more details, https://github.com/Ch3lLIST4/CTF-Writeups-2021/blob/main/RITSEC-CTF-2021/DababyWeb.md (his payload is `| ls`)
